@@ -4,3 +4,4 @@ client/mojapraksa/node_modules/
 uploads/
 build/
 dist/
+*.zip
