@@ -1,0 +1,6 @@
+node_modules/
+.env
+client/mojapraksa/node_modules/
+uploads/
+build/
+dist/
