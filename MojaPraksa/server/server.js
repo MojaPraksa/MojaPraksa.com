@@ -1,3 +1,6 @@
+import path from 'path';
+import { fileURLToPath } from 'url';
+
 require("dotenv").config();
 const express = require("express");
 const cors = require("cors");
@@ -18,6 +21,11 @@ app.use("/api/companies", require("./routes/companyRoutes"));
 app.use("/api/interns", require("./routes/internRoutes"));
 app.use("/api/email", require("./routes/emailRoutes"));
 app.use("/uploads", express.static("uploads"));
+
+//
+const __filename=fileURLToPath(import.meta.url)
+const __dirname=path.dirname(__filename)
+console.log(__dirname)
 
 app.use(express.static(path.join(__dirname, 'client/mojapraksa/build')));
 
